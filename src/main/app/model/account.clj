@@ -22,8 +22,9 @@
    ;; I can output all accounts. NOTE: only ID is needed...other resolvers resolve the rest
    ::pc/output [{:all-accounts [:account/id]}]}
   {:all-accounts (mapv
-                   (fn [id] {:account/id id})
-                   (all-account-ids db))})
+                  (fn [id]
+                    {:account/id id})
+                  (all-account-ids db))})
 
 (>defn get-account [db id subquery]
   [any? uuid? vector? => (? map?)]

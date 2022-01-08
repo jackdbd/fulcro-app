@@ -13,7 +13,7 @@
     "client/nodejs": "npx shadow-cljs node-repl",
     "report:main": "npx shadow-cljs run shadow.cljs.build-report main report.html",
     "server": "clojure -A:dev -J-Dtrace -J-Dguardrails.enabled=true",
-    "start": "run-p --print-label client/server server"
+    "start": "run-p --print-label client/main server"
   },
   "devDependencies": {
     "highlight.js": "^11.4.0",
